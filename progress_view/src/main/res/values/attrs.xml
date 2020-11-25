@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ProgressView">
+        <attr name="text" format="string|reference" />
+        <attr name="textSize" format="dimension|reference" />
+        <attr name="textColor" format="color|reference" />
+        <attr name="maxValue" format="integer" />
+        <attr name="currentValue" format="integer" />
+        <attr name="isTextStatic" format="boolean" />
+        <attr name="isPercent" format="boolean" />
+        <attr name="isStrokeCapRound" format="boolean" />
+        <attr name="progressHeight" format="dimension|reference" />
+        <attr name="progressColor" format="color|reference" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Color palette -->
+    <eat-comment />
+    <attr name="primaryTextColor" format="color" />
+    <attr name="secondaryTextColor" format="color" />
+    <attr name="hintTextColor" format="color" />
+    <attr name="divideColor" format="color" />
+    <attr name="activeColor" format="color" />
+    <attr name="inactiveColor" format="color" />
+
+    <attr name="dialogPrimaryColor" format="color" />
+    <attr name="dialogSecondaryColor" format="color" />
+    <attr name="dialogAccentColor" format="color" />
+    <attr name="dialogPrimaryTextColor" format="color" />
+    <attr name="dialogSecondaryTextColor" format="color" />
+    <attr name="dialogHintTextColor" format="color" />
+    <attr name="dialogDivideColor" format="color" />
+    <attr name="dialogButtonTextColor" format="color" />
+    <attr name="dialogBackgroundColor" format="color" />
+    <attr name="dialogActiveColor" format="color" />
+    <attr name="dialogInactiveColor" format="color" />
+
+    <color name="primaryTextColor">#212121</color>                      <!--900-->
+    <color name="darkGrayColor">#424242</color>                         <!--800-->
+    <color name="darkSecondaryTextColor">#616161</color>                <!--700-->
+    <color name="secondaryTextColor">#757575</color>                    <!--600-->
+    <color name="grayColor">#9E9E9E</color>                             <!--500-->
+    <color name="divideColor">#BDBDBD</color>                           <!--400-->
+    <color name="hintColor">#E0E0E0</color>                             <!--300-->
+    <color name="lightGrayColor">#EEEEEE</color>                        <!--200-->
+    <color name="greyColor">#F5F5F5</color>                             <!--100-->
+    <color name="lightGreyColor">#FAFAFA</color>                        <!--50-->
+
+    <!-- Dark Theme -->
+    <color name="primaryTextColorDark">#DE000000</color>               <!--主文本 纯黑的 87% #212121 -->
+    <color name="secondaryTextColorDark">#8A000000</color>             <!--次级文本 纯黑的 54% #757575-->
+    <color name="hintTextColorDark">#43000000
+    </color>                  <!--禁用/提示文本 纯黑的 26% #BDBDBD -->
+    <color name="divideColorDark">#1E000000</color>                    <!--分割线 纯黑的 12% #e0e0e0 -->
+    <color name="activeColorDark">#757575</color>                      <!--正常状态 纯黑的 54%-->
+    <!--    <color name="activeColorDark">#8A000000</color>                    &lt;!&ndash;正常状态 纯黑的 54%&ndash;&gt;-->
+    <color name="inactiveColorDark">#BDBDBD</color>                    <!--禁用状态 纯黑的 26%-->
+    <!--    <color name="inactiveColorDark">#42000000</color>                  &lt;!&ndash;禁用状态 纯黑的 26%&ndash;&gt;-->
+
+    <!-- Light Theme -->
+    <color name="primaryTextColorLight">#FFFFFF</color>                  <!--主文本 纯白的 100% -->
+    <color name="secondaryTextColorLight">#B2FFFFFF</color>              <!--次级文本 纯白的 70% -->
+    <color name="hintTextColorLight">#80FFFFFF</color>                   <!--禁用/提示文本 纯白的 50% -->
+    <color name="divideColorLight">#1EFFFFFF</color>                     <!--分割线 纯白的 12% -->
+    <color name="activeColorLight">#FFFFFF</color>                       <!--正常状态 纯白的 100%-->
+    <color name="inactiveColorLight">#EEEEEE</color>                     <!--禁用状态 纯白的 30%-->
+    <!--    <color name="inactiveColorLight">#4DFFFFFF</color>                   &lt;!&ndash;禁用状态 纯白的 30%&ndash;&gt;-->
+
+    <color name="colorTranslucentLight">#4DFFFFFF</color>               <!--禁用状态 纯白的 30%-->
+    <color name="colorTranslucentLightGray">#70EFEFEF</color>           <!--带透明度Light Gray-->
+    <color name="colorTranslucentGray">#33EFEFEF</color>                <!--带透明度Light Gray-->
+    <color name="colorTranslucentDarkGrey">#BB757575</color>            <!--带透明度Dark Gray-->
+    <color name="colorTranslucentDarkGray">#DD212121</color>            <!--带透明度Dark Gray-->
+    <color name="colorMaterialLightBlue">#FF0091ea</color>
+    <color name="colorMaterialSecondLightBlue">#500091ea</color>
+</resources>

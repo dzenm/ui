@@ -1,0 +1,10 @@
+include ':app'
+include ':badge_drawable'
+include ':dialog'
+include ':input_text_view'
+include ':picker_view'
+include ':progress_view'
+include ':ratio_image'
+include ':side_bar'
+include ':switch_button'
+rootProject.name = "ui"

@@ -1,0 +1,48 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+}
+
+android {
+    compileSdkVersion Ext.compileSdkVersion
+    buildToolsVersion Ext.buildToolsVersion
+    defaultConfig {
+        applicationId "com.dzenm.ui"
+        minSdkVersion Ext.minSdkVersion
+        targetSdkVersion Ext.targetSdkVersion
+        versionCode Ext.versionCode
+        versionName Ext.versionName
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation Ext.core
+    implementation Ext.AppCompact
+    implementation Ext.constraintLayout
+    implementation 'com.google.android.material:material:1.2.1'
+    testImplementation Ext.junit
+    androidTestImplementation Ext.androidJunit
+    androidTestImplementation Ext.espresso
+    implementation project(":badge_drawable")
+    implementation project(':dialog')
+    implementation project(':input_text_view')
+    implementation project(':picker_view')
+    implementation project(':progress_view')
+    implementation project(':ratio_image')
+    implementation project(':side_bar')
+    implementation project(':switch_button')
+}

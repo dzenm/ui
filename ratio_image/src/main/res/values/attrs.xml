@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="RatioImageView">
+        <attr name="isCircle" format="boolean" />
+        <attr name="isMask" format="boolean" />
+        <attr name="ratio" format="float" />
+        <attr name="foregroundColor" format="color|reference" />
+        <attr name="cornerRadius" format="dimension|reference" />
+        <attr name="top_left_cornerRadius" format="dimension|reference" />
+        <attr name="top_right_cornerRadius" format="dimension|reference" />
+        <attr name="bottom_left_cornerRadius" format="dimension|reference" />
+        <attr name="bottom_right_cornerRadius" format="dimension|reference" />
+        <attr name="numberColor" format="color|reference" />
+        <attr name="numberMaskColor" format="color|reference" />
+        <attr name="numberSize" format="dimension|reference" />
+    </declare-styleable>
+
+</resources>

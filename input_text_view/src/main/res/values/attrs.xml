@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="EditTextLayout">
+        <attr name="backgroundNormal" format="integer|reference" />
+        <attr name="backgroundError" format="integer|reference" />
+        <attr name="isEnabledEmptyVerity" format="boolean" />
+    </declare-styleable>
+
+</resources>

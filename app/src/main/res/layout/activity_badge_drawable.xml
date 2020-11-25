@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".BadgeDrawableActivity">
+
+    <ImageView
+        android:id="@+id/imageViewBadge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="48dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_launcher_image" />
+
+    <RadioGroup
+        android:id="@+id/pictureRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/selecto"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="selecto" />
+
+        <RadioButton
+            android:id="@+id/vector"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="vector" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/circleRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/circle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="circlr" />
+
+        <RadioButton
+            android:id="@+id/notCircle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="not circle" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/positionRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/tl"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="tl" />
+
+        <RadioButton
+            android:id="@+id/tr"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="tr" />
+
+        <RadioButton
+            android:id="@+id/bl"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="bl" />
+
+        <RadioButton
+            android:id="@+id/br"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="br" />
+
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_number"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            android:hint="number"
+            android:inputType="number" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_border_size"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"
+            android:hint="border size"
+            android:inputType="number" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/build"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:onClick="onClick"
+        android:text="build"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:onClick="onClick"
+        android:text="Reset"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>

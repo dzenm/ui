@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SwitchButton">
+        <attr name="buttonCheckedColor" format="color|reference" />
+        <attr name="buttonUncheckedColor" format="color|reference" />
+        <attr name="checkedColor" format="color|reference" />
+        <attr name="uncheckedColor" format="color|reference" />
+        <attr name="isChecked" format="boolean" />
+        <attr name="isEnabledAnimator" format="boolean" />
+        <attr name="isShadow" format="boolean" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".DialogActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+
+        <TextView
+            android:id="@+id/tv_11"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="Title and 2 Button Material Dialog"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/tv_12"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="Message and 2 Button Material Dialog"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/tv_13"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="Title Message and 2 Button Material Dialog"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/tv_14"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="Title Icon Message and 2 Button Material Dialog"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/tv_15"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="Title Message and 3 Button Material 2 Dialog"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/tv_16"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="Title Message and 3 Button Material Dialog"
+            android:textColor="@android:color/white" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="16dp"
+            android:background="@color/purple_500" />
+
+        <TextView
+            android:id="@+id/tv_211"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="Title and 2 Button IOS Dialog"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/tv_221"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="Message and 2 Button IOS Dialog"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/tv_231"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="Title Message and 2 Button IOS Dialog"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/tv_241"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="Title Icon Message and 2 Button IOS Dialog"
+            android:textColor="@android:color/white" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="16dp"
+            android:background="@color/purple_500" />
+
+        <TextView
+            android:id="@+id/tv_21"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="Title Item and 2 Button Material Dialog"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/tv_22"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="Title Single and 2 Button Material Dialog"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/tv_23"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="Title Multip and 2 Button Material Dialog"
+            android:textColor="@android:color/white" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="16dp"
+            android:background="@color/purple_500" />
+
+        <TextView
+            android:id="@+id/tv_24"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="Title Item and 2 Button IOS Dialog"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/tv_25"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="Title Single and 2 Button IOS Dialog"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/tv_26"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="Title Multip and 2 Button IOS Dialog"
+            android:textColor="@android:color/white" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="16dp"
+            android:background="@color/purple_500" />
+
+        <TextView
+            android:id="@+id/tv_40"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="Long Message and 2 Button IOS Dialog"
+            android:textColor="@android:color/white" />
+
+
+        <TextView
+            android:id="@+id/tv_41"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="Upgrade Dialog"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/tv_42"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="Upgrade with Top Image Dialog"
+            android:textColor="@android:color/white" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="16dp"
+            android:background="@color/purple_500" />
+
+        <TextView
+            android:id="@+id/tv_43"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="Photo selector center material dialog"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/tv_44"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="Photo selector bottom material dialog"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/tv_45"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="Photo selector IOS dialog"
+            android:textColor="@android:color/white" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="16dp"
+            android:background="@color/purple_500" />
+
+        <TextView
+            android:id="@+id/tv_loading_success"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginVertical="20dp"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="成功提示"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/tv_loading_error"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="错误提示"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/tv_loading_warming"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="警告提示"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/tv_loading_custom"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="自定义图片文本提示"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/tv_loading_success_return"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="提示成功回调"
+            android:textColor="@android:color/white" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="16dp"
+            android:background="@color/purple_500" />
+
+        <TextView
+            android:id="@+id/tv_loading_1"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginVertical="20dp"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="预定义小圆点透明度变化"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/tv_loading_2"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="预定义小圆点移动变化"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/tv_loading_3"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="预定义小圆点缩放变化"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/tv_loading_4"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="预定义方形缩放变化"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/tv_loading_5"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="预定义方形透明度变化"
+            android:textColor="@android:color/white" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="16dp"
+            android:background="@color/purple_500" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
