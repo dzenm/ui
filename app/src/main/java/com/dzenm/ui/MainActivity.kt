@@ -16,6 +16,9 @@ class MainActivity : AppCompatActivity() {
         dialog_button.setOnClickListener {
             startActivity(Intent(this, DialogActivity::class.java))
         }
+        fish_button.setOnClickListener {
+            startActivity(Intent(this, FishActivity::class.java))
+        }
         edit_text_button.setOnClickListener {
             startActivity(Intent(this, EditControlTextActivity::class.java))
         }

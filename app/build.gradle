@@ -25,6 +25,7 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    dynamicFeatures = []
 }
 
 dependencies {
@@ -33,16 +34,9 @@ dependencies {
     implementation Ext.core
     implementation Ext.AppCompact
     implementation Ext.constraintLayout
-    implementation 'com.google.android.material:material:1.2.1'
+    implementation Ext.material
     testImplementation Ext.junit
     androidTestImplementation Ext.androidJunit
     androidTestImplementation Ext.espresso
-    implementation project(":badge_drawable")
-    implementation project(':dialog')
-    implementation project(':input_text_view')
-    implementation project(':picker_view')
-    implementation project(':progress_view')
-    implementation project(':ratio_image')
-    implementation project(':side_bar')
-    implementation project(':switch_button')
+    implementation project(":ui")
 }

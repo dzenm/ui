@@ -12,8 +12,11 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.annotation.DrawableRes;
 import androidx.annotation.IntDef;
 import androidx.annotation.NonNull;
+import androidx.annotation.StringRes;
+import androidx.core.content.res.ResourcesCompat;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -58,15 +61,19 @@ public class PromptDialog extends BaseDialog {
 
     private TextView tvLoadText;
 
+    private Drawable mIcon;
+
+    private CharSequence mText;
+
     /**
      * 是否在动画显示完成之后自动关闭dialog, 为true时需要自己关闭dialog, 为false时显示1.5秒自动关闭
      */
-    private boolean isAutoDismiss;
+    private boolean isAutoDismiss = false;
 
     /**
-     * 延时关闭dialog的时间, {@link #setCountTime(int)}
+     * 延时关闭dialog的时间, {@link #setCountTime(long)}
      */
-    private float mCountTime = 1.5f;
+    private long mCountTime = 1000;
 
     /**
      * 倒计时监听事件 {@link #setOnCountListener(OnCountDownListener)}
@@ -89,28 +96,36 @@ public class PromptDialog extends BaseDialog {
      * @param success 成功提示
      */
     public void showSuccess(String success) {
-        show(success, R.drawable.prompt_success, true);
+        setText(success);
+        setIcon(R.drawable.prompt_success);
+        autoDismiss();
     }
 
     /**
      * @param error 错误提示
      */
     public void showError(String error) {
-        show(error, R.drawable.prompt_error, true);
+        setText(error);
+        setIcon(R.drawable.prompt_error);
+        autoDismiss();
     }
 
     /**
      * @param warming 警告提示
      */
     public void showWarming(String warming) {
-        show(warming, R.drawable.prompt_warming, true);
+        setText(warming);
+        setIcon(R.drawable.prompt_warming);
+        autoDismiss();
     }
 
     /**
      * @param refresh 刷新提示
      */
     public void showRefresh(String refresh) {
-        show(refresh, R.drawable.prompt_refresh, true);
+        setText(refresh);
+        setIcon(R.drawable.prompt_refresh);
+        autoDismiss();
     }
 
     /**
@@ -125,50 +140,57 @@ public class PromptDialog extends BaseDialog {
     }
 
     /**
-     * @param countTime 倒计时
+     * @param countTime 倒计时时间
      * @return this
      */
-    public PromptDialog setCountTime(int countTime) {
+    public PromptDialog setCountTime(long countTime) {
         mCountTime = countTime;
         return this;
     }
 
-    public void show(@LoadingType int type) {
-        int icon = 0;
+    public void showLoading() {
+        showLoading(LOADING_POINT_ALPHA);
+    }
+
+    public void showLoading(@LoadingType int type) {
         if (type == LOADING_POINT_SCALE) {
-            icon = R.drawable.prompt_loading_point_scale;
+            setIcon(R.drawable.prompt_loading_point_scale);
         } else if (type == LOADING_POINT_ALPHA) {
-            icon = R.drawable.prompt_loading_point_alpha;
+            setIcon(R.drawable.prompt_loading_point_alpha);
         } else if (type == LOADING_POINT_TRANS) {
-            icon = R.drawable.prompt_loading_point_translate;
+            setIcon(R.drawable.prompt_loading_point_translate);
         } else if (type == LOADING_RECT_SCALE) {
-            icon = R.drawable.prompt_loading_rectangle_scale;
+            setIcon(R.drawable.prompt_loading_rectangle_scale);
         } else if (type == LOADING_RECT_ALPHA) {
-            icon = R.drawable.prompt_loading_rectangle_alpha;
+            setIcon(R.drawable.prompt_loading_rectangle_alpha);
         }
-        show("正在加载", icon);
-    }
-
-    public void show(String loadText, int loadImg) {
-        show(loadText, loadImg, false);
-    }
-
-    /**
-     * 自定义提示框
-     *
-     * @param loadText      提示文字
-     * @param loadImg       提示图片
-     * @param isAutoDismiss 是否自动取消
-     */
-    public void show(String loadText, int loadImg, boolean isAutoDismiss) {
-        setPromptText(loadText);
-        setImageResourceType(loadImg);
-        this.isAutoDismiss = isAutoDismiss;
+        setText("正在加载");
         show();
     }
 
-    private void setPromptText(String promptText) {
-        tvLoadText.setText(promptText);
+    public void autoDismiss() {
+        isAutoDismiss = true;
+        show();
+    }
+
+    public PromptDialog setIcon(@DrawableRes int resId) {
+        mIcon = getDrawable(resId);
+        return this;
+    }
+
+    public PromptDialog setIcon(Drawable drawable) {
+        mIcon = drawable;
+        return this;
+    }
+
+    public PromptDialog setText(String text) {
+        mText = text;
+        return this;
+    }
+
+    public PromptDialog setText(@StringRes int resId) {
+        mText = getContext().getText(resId);
+        return this;
     }
 
     @Override
@@ -207,8 +229,8 @@ public class PromptDialog extends BaseDialog {
         return this;
     }
 
-    // ************************************* 以下为实现过程 ********************************* //
 
+    // ************************************* 以下为实现过程 ********************************* //
     protected PromptDialog(@NonNull Context context) {
         super(context);
         // 圆角，背景透明灰
@@ -220,14 +242,15 @@ public class PromptDialog extends BaseDialog {
     @Override
     public void show() {
         super.show();
+        setImageType(mIcon);
+        setPromptText(mText);
         if (isAutoDismiss) {
             // 是否在显示完成之后自动取消
             mCountDownTimer.start();
         }
     }
 
-    private final CountDownTimer mCountDownTimer = new CountDownTimer(
-            (long) (mCountTime * 1000), 1000) {
+    private final CountDownTimer mCountDownTimer = new CountDownTimer(mCountTime, 1000) {
         @Override
         public void onTick(long millisUntilFinished) {
             if (mOnCountDownListener != null)
@@ -321,22 +344,19 @@ public class PromptDialog extends BaseDialog {
         return null;
     }
 
+    private void setPromptText(CharSequence promptText) {
+        tvLoadText.setText(promptText);
+    }
+
     /**
      * @param icon 图片资源
      */
-    private void setImageResourceType(int icon) {
+    private void setImageType(Drawable icon) {
         LinearLayout.LayoutParams layoutParams = (LinearLayout.LayoutParams) ivIconImage.getLayoutParams();
-        if (icon == LOADING_POINT_TRANS) {
-            layoutParams.width = layoutParams.height = Utils.dp2px(60);
-        } else if (icon == LOADING_POINT_SCALE || icon == LOADING_POINT_ALPHA ||
-                icon == LOADING_RECT_SCALE || icon == LOADING_RECT_ALPHA) {
-            layoutParams.width = layoutParams.height = Utils.dp2px(60);
-        } else {
-            layoutParams.width = layoutParams.height = Utils.dp2px(60);
-        }
+        layoutParams.width = layoutParams.height = Utils.dp2px(60);
 
         ivIconImage.setLayoutParams(layoutParams);
-        ivIconImage.setImageResource(icon);
+        ivIconImage.setImageDrawable(icon);
 
         Utils.play(ivIconImage.getDrawable());
     }
@@ -349,6 +369,10 @@ public class PromptDialog extends BaseDialog {
     @Override
     protected boolean isPromptDialog() {
         return true;
+    }
+
+    private Drawable getDrawable(@DrawableRes int resId) {
+        return ResourcesCompat.getDrawable(getContext().getResources(), resId, null);
     }
 
     public static abstract class OnCountDownListener {

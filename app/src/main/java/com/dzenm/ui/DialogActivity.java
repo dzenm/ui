@@ -410,7 +410,9 @@ public class DialogActivity extends AppCompatActivity {
                     .showWarming("您的身份信息可能被泄露");
         } else if (view.getId() == R.id.tv_loading_custom) {
             PromptDialog.newInstance(this)
-                    .show("正在加载中, 请稍后...", R.drawable.ic_warm, true);
+                    .setText("正在加载中, 请稍后...")
+                    .setIcon(R.drawable.ic_warm)
+                    .autoDismiss();
         } else if (view.getId() == R.id.tv_loading_success_return) {
             PromptDialog.newInstance(this)
                     .setTranslucent(true)
@@ -422,19 +424,19 @@ public class DialogActivity extends AppCompatActivity {
                     }).showSuccess("完成");
         } else if (view.getId() == R.id.tv_loading_1) {
             PromptDialog.newInstance(this)
-                    .show(PromptDialog.LOADING_POINT_ALPHA);
+                    .showLoading(PromptDialog.LOADING_POINT_ALPHA);
         } else if (view.getId() == R.id.tv_loading_2) {
             PromptDialog.newInstance(this)
-                    .show(PromptDialog.LOADING_POINT_TRANS);
+                    .showLoading(PromptDialog.LOADING_POINT_TRANS);
         } else if (view.getId() == R.id.tv_loading_3) {
             PromptDialog.newInstance(this)
-                    .show(PromptDialog.LOADING_POINT_SCALE);
+                    .showLoading(PromptDialog.LOADING_POINT_SCALE);
         } else if (view.getId() == R.id.tv_loading_4) {
             PromptDialog.newInstance(this)
-                    .show(PromptDialog.LOADING_RECT_SCALE);
+                    .showLoading(PromptDialog.LOADING_RECT_SCALE);
         } else if (view.getId() == R.id.tv_loading_5) {
             PromptDialog.newInstance(this)
-                    .show(PromptDialog.LOADING_RECT_ALPHA);
+                    .showLoading(PromptDialog.LOADING_RECT_ALPHA);
         }
     }
 }

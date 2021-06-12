@@ -223,19 +223,7 @@ public class DialogDelegate {
         }
     }
 
-    int getDialogAnimator(int gravity) {
-        if (gravity == Gravity.TOP) {
-            return Utils.top();
-        } else if (gravity == Gravity.BOTTOM) {
-            return Utils.bottom();
-        }
-        return Utils.expand();
-    }
-
     void onStart() {
-//        Animation startAnimator = OptAnimationLoader.loadAnimation(mActivity,
-//                R.anim.dialog_scale_shrink_in);
-//        mContentView.setAnimation(startAnimator);
         if (mAnimator == -1) {
             mAnimator = getDialogAnimator(mGravity);
         }
@@ -244,6 +232,15 @@ public class DialogDelegate {
         setLayoutParams(mDecorView, mMargin);
 
         applyWindowsProperty();
+    }
+
+    int getDialogAnimator(int gravity) {
+        if (gravity == Gravity.TOP) {
+            return Utils.top();
+        } else if (gravity == Gravity.BOTTOM) {
+            return Utils.bottom();
+        }
+        return Utils.expand();
     }
 
     /**
