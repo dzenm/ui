@@ -39,5 +39,5 @@ dependencies {
     testImplementation Ext.junit
     androidTestImplementation Ext.androidJunit
     androidTestImplementation Ext.espresso
-    implementation project(":view")
+//    implementation project(":view")
 }
