@@ -107,8 +107,8 @@ public class FishLayout extends RelativeLayout {
         ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(mFishView, "x", "y", path);
         objectAnimator.setDuration(2000);
 
-        PathMeasure pathMeasure = new PathMeasure(path, false);
-        float[] tan = new float[2];
+        final PathMeasure pathMeasure = new PathMeasure(path, false);
+        final float[] tan = new float[2];
         objectAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
             public void onAnimationUpdate(ValueAnimator valueAnimator) {

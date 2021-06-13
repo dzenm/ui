@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.dzenm.BadgeDrawable;
+import com.dzenm.badgedrawable.BadgeDrawable;
 
 public class BadgeDrawableActivity extends AppCompatActivity implements View.OnClickListener {
 

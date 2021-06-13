@@ -8,12 +8,12 @@
     android:padding="40dp"
     tools:context=".SwitchButtonActivity">
 
-    <com.dzenm.SwitchButton
+    <com.dzenm.switchbutton.SwitchButton
         android:id="@+id/switch_button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
-    <com.dzenm.SwitchButton
+    <com.dzenm.switchbutton.SwitchButton
         android:id="@+id/switch_button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -22,13 +22,13 @@
         app:isChecked="true"
         app:uncheckedColor="@android:color/holo_red_light" />
 
-    <com.dzenm.SwitchButton
+    <com.dzenm.switchbutton.SwitchButton
         android:id="@+id/switch_button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:checkedColor="@color/colorMaterialLightBlue" />
 
-    <com.dzenm.SwitchButton
+    <com.dzenm.switchbutton.SwitchButton
         android:id="@+id/switch_button4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -36,14 +36,14 @@
         android:isScrollContainer="false"
         app:isEnabledAnimator="false" />
 
-    <com.dzenm.SwitchButton
+    <com.dzenm.switchbutton.SwitchButton
         android:id="@+id/switch_button5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:buttonCheckedColor="@color/colorMaterialLightBlue"
         app:buttonUncheckedColor="@color/purple_500" />
 
-    <com.dzenm.SwitchButton
+    <com.dzenm.switchbutton.SwitchButton
         android:id="@+id/switch_button6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

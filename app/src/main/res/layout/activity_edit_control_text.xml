@@ -13,7 +13,7 @@
         android:padding="16dp"
         android:text="带删除按钮的EditText" />
 
-    <com.dzenm.EditText
+    <com.dzenm.input_text.EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
@@ -23,7 +23,7 @@
         android:padding="16dp"
         android:text="自动校验的EditLayout" />
 
-    <com.dzenm.EditTextLayout
+    <com.dzenm.input_text.EditTextLayout
         android:id="@+id/edit_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -31,19 +31,19 @@
         android:layout_marginBottom="16dp"
         android:orientation="vertical">
 
-        <com.dzenm.EditText
+        <com.dzenm.input_text.EditText
             android:id="@+id/edit_text1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-        <com.dzenm.EditText
+        <com.dzenm.input_text.EditText
             android:id="@+id/edit_text2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp" />
 
-        <com.dzenm.EditText
+        <com.dzenm.input_text.EditText
             android:id="@+id/edit_text3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
@@ -57,6 +57,6 @@
             android:backgroundTint="@android:color/holo_purple"
             android:text="登录"
             android:textColor="@android:color/white" />
-    </com.dzenm.EditTextLayout>
+    </com.dzenm.input_text.EditTextLayout>
 
 </LinearLayout>

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".ProgressViewActivity">
 
-    <com.dzenm.ProgressView
+    <com.dzenm.progressview.ProgressView
         android:id="@+id/progress_view1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:progressColor="@android:color/holo_orange_dark" />
 
-    <com.dzenm.ProgressView
+    <com.dzenm.progressview.ProgressView
         android:id="@+id/progress_view2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -29,7 +29,7 @@
         app:layout_constraintTop_toBottomOf="@+id/progress_view1"
         app:progressColor="@color/teal_200" />
 
-    <com.dzenm.ProgressView
+    <com.dzenm.progressview.ProgressView
         android:id="@+id/progress_view3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -42,7 +42,7 @@
         app:maxValue="10"
         app:textColor="@android:color/holo_red_dark" />
 
-    <com.dzenm.ProgressView
+    <com.dzenm.progressview.ProgressView
         android:id="@+id/progress_view4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -55,7 +55,7 @@
         app:layout_constraintTop_toBottomOf="@+id/progress_view3"
         app:progressColor="@color/purple_500" />
 
-    <com.dzenm.ProgressView
+    <com.dzenm.progressview.ProgressView
         android:id="@+id/progress_view5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -68,7 +68,7 @@
         app:progressColor="@android:color/holo_red_dark"
         app:text="" />
 
-    <com.dzenm.ProgressView
+    <com.dzenm.progressview.ProgressView
         android:id="@+id/progress_view6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -82,7 +82,7 @@
         app:progressColor="@android:color/holo_blue_bright"
         app:textColor="@android:color/holo_blue_bright" />
 
-    <com.dzenm.ProgressView
+    <com.dzenm.progressview.ProgressView
         android:id="@+id/progress_view7"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -96,7 +96,7 @@
         app:progressHeight="16dp"
         app:text="" />
 
-    <com.dzenm.ProgressView
+    <com.dzenm.progressview.ProgressView
         android:id="@+id/progress_view8"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -107,7 +107,7 @@
         app:layout_constraintTop_toBottomOf="@+id/progress_view7"
         app:progressColor="@android:color/holo_orange_light" />
 
-    <com.dzenm.ProgressView
+    <com.dzenm.progressview.ProgressView
         android:id="@+id/progress_view9"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

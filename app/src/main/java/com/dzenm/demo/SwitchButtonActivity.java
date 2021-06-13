@@ -5,7 +5,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.dzenm.SwitchButton;
+import com.dzenm.switchbutton.SwitchButton;
 
 public class SwitchButtonActivity extends AppCompatActivity {
 

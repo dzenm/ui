@@ -22,11 +22,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
-    dynamicFeatures = []
 }
 
 dependencies {
@@ -39,5 +34,6 @@ dependencies {
     testImplementation Ext.junit
     androidTestImplementation Ext.androidJunit
     androidTestImplementation Ext.espresso
-//    implementation project(":view")
+    implementation project(":view")
+//    implementation 'com.github.dzenm.ui:view:1.0.3'
 }
