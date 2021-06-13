@@ -1,4 +1,4 @@
-package com.dzenm.ui
+package com.dzenm.demo
 
 import android.os.Bundle
 import android.view.View

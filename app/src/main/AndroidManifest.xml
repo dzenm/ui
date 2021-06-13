@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:dist="http://schemas.android.com/apk/distribution"
-    package="com.dzenm.ui">
+    package="com.dzenm.demo">
 
     <dist:module dist:instant="true" />
 
@@ -12,20 +12,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Ui">
-        <activity android:name=".FishActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name="com.dzenm.demo.FishActivity" />
+        <activity android:name="com.dzenm.demo.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DialogActivity" />
-        <activity android:name=".BadgeDrawableActivity" />
-        <activity android:name=".SwitchButtonActivity" />
-        <activity android:name=".EditControlTextActivity" />
-        <activity android:name=".RatioImageViewActivity" />
-        <activity android:name=".ProgressViewActivity" />
+        <activity android:name="com.dzenm.demo.DialogActivity" />
+        <activity android:name="com.dzenm.demo.BadgeDrawableActivity" />
+        <activity android:name="com.dzenm.demo.SwitchButtonActivity" />
+        <activity android:name="com.dzenm.demo.EditControlTextActivity" />
+        <activity android:name="com.dzenm.demo.RatioImageViewActivity" />
+        <activity android:name="com.dzenm.demo.ProgressViewActivity" />
     </application>
 
 </manifest>

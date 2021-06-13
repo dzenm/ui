@@ -22,7 +22,7 @@
             <option value="$PROJECT_DIR$/ratio_image" />
             <option value="$PROJECT_DIR$/side_bar" />
             <option value="$PROJECT_DIR$/switch_button" />
-            <option value="$PROJECT_DIR$/ui" />
+            <option value="$PROJECT_DIR$/view" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

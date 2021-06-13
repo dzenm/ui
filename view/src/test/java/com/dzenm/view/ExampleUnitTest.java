@@ -1,4 +1,4 @@
-package com.dzenm.ui;
+package com.dzenm.view;
 
 import org.junit.Test;
 

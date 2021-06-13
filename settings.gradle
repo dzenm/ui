@@ -8,5 +8,5 @@ include ':progress_view'
 include ':ratio_image'
 include ':side_bar'
 include ':switch_button'
+include ':view'
 rootProject.name = "ui"
-include ':ui'

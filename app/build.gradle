@@ -8,13 +8,14 @@ android {
     compileSdkVersion Ext.compileSdkVersion
     buildToolsVersion Ext.buildToolsVersion
     defaultConfig {
-        applicationId "com.dzenm.ui"
+        applicationId "com.dzenm.demo"
         minSdkVersion Ext.minSdkVersion
         targetSdkVersion Ext.targetSdkVersion
         versionCode Ext.versionCode
         versionName Ext.versionName
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -38,5 +39,5 @@ dependencies {
     testImplementation Ext.junit
     androidTestImplementation Ext.androidJunit
     androidTestImplementation Ext.espresso
-    implementation project(":ui")
+    implementation project(":view")
 }

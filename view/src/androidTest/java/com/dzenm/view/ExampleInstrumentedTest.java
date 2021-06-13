@@ -1,4 +1,4 @@
-package com.dzenm.ui;
+package com.dzenm.view;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.dzenm.ui.test", appContext.getPackageName());
+        assertEquals("com.dzenm.view.test", appContext.getPackageName());
     }
 }
