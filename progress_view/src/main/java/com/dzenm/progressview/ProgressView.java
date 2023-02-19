@@ -15,11 +15,9 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.dzenm.R;
-
 /**
  * @author dzenm
- * @date 2019-08-14 10:22
+ * {@code @date} 2019-08-14 10:22
  */
 public class ProgressView extends View {
 
@@ -63,7 +61,7 @@ public class ProgressView extends View {
     /**
      * 文本的前后间距
      */
-    private float mTextPadding;
+    private final float mTextPadding;
 
     /**
      * 百分比文字是否静止在末尾（可通过xml的属性设置）
@@ -83,22 +81,22 @@ public class ProgressView extends View {
     /**
      * 绘制背景灰色线条画笔
      */
-    private Paint mPaintRemainingValue;
+    private final Paint mPaintRemainingValue;
 
     /**
      * 绘制进度条画笔
      */
-    private Paint mPaintProgressValue;
+    private final Paint mPaintProgressValue;
 
     /**
      * 绘制下载进度画笔
      */
-    private Paint mPaintText;
+    private final Paint mPaintText;
 
     /**
      * 获取百分比数字的长宽
      */
-    private Rect mTextBound;
+    private final Rect mTextBound;
 
     public ProgressView(Context context) {
         this(context, null);
@@ -304,7 +302,7 @@ public class ProgressView extends View {
      * @return 高度
      */
     private int measureHeight(int defaultHeight, int measureSpec) {
-        int height = defaultHeight;
+        int height;
         int specMode = MeasureSpec.getMode(measureSpec);
         int specSize = MeasureSpec.getSize(measureSpec);
         if (specMode == MeasureSpec.AT_MOST) {
@@ -313,6 +311,8 @@ public class ProgressView extends View {
             height = specSize;
         } else if (specMode == MeasureSpec.UNSPECIFIED) {
             height = Math.max(defaultHeight, specSize);
+        } else {
+            height = defaultHeight;
         }
         return height;
     }

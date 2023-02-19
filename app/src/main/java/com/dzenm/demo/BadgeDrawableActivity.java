@@ -33,7 +33,7 @@ public class BadgeDrawableActivity extends AppCompatActivity implements View.OnC
                 Toast.makeText(this, "请输入显示的数量", Toast.LENGTH_SHORT).show();
                 return;
             }
-            drawBadge(Integer.valueOf(number));
+            drawBadge(Integer.parseInt(number));
         } else if (v.getId() == R.id.reset) {
             drawBadge(-1);
         }
@@ -41,7 +41,7 @@ public class BadgeDrawableActivity extends AppCompatActivity implements View.OnC
 
     private void drawBadge(int number) {
         RadioGroup drawableRadioGroup = findViewById(R.id.pictureRadioGroup);
-        int drawableResId = 0;
+        int drawableResId;
         if (drawableRadioGroup.getCheckedRadioButtonId() == R.id.selecto) {
             drawableResId = R.drawable.ic_notifications;
         } else {
@@ -49,15 +49,10 @@ public class BadgeDrawableActivity extends AppCompatActivity implements View.OnC
         }
 
         RadioGroup circleRadioGroup = findViewById(R.id.circleRadioGroup);
-        boolean isCircle;
-        if (circleRadioGroup.getCheckedRadioButtonId() == R.id.circle) {
-            isCircle = true;
-        } else {
-            isCircle = false;
-        }
+        boolean isCircle = circleRadioGroup.getCheckedRadioButtonId() == R.id.circle;
 
         RadioGroup positionRadioGroup = findViewById(R.id.positionRadioGroup);
-        int positionBadge = BadgeDrawable.BadgePosition.TOP_LEFT;
+        int positionBadge;
         if (positionRadioGroup.getCheckedRadioButtonId() == R.id.tl) {
             positionBadge = BadgeDrawable.BadgePosition.TOP_LEFT;
         } else if (positionRadioGroup.getCheckedRadioButtonId() == R.id.tr) {
@@ -66,11 +61,13 @@ public class BadgeDrawableActivity extends AppCompatActivity implements View.OnC
             positionBadge = BadgeDrawable.BadgePosition.BOTTOM_LEFT;
         } else if (positionRadioGroup.getCheckedRadioButtonId() == R.id.br) {
             positionBadge = BadgeDrawable.BadgePosition.BOTTOM_RIGHT;
+        } else {
+            positionBadge = BadgeDrawable.BadgePosition.TOP_LEFT;
         }
 
         ImageView imageViewBadge = findViewById(R.id.imageViewBadge);
 
-        int badgeBorderSize = Integer.valueOf(etBadgeBorderSize.getText().toString());
+        int badgeBorderSize = Integer.parseInt(etBadgeBorderSize.getText().toString());
         new BadgeDrawable.Builder(getApplicationContext())
                 .setDrawable(drawableResId)
                 .setCircle(isCircle)

@@ -19,28 +19,26 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.core.view.ViewCompat;
 
-import com.dzenm.R;
-
 public class RatioImageView extends AppCompatImageView {
 
-    private int[] mCornerRadius = new int[4];   // 四个角的圆角大小, 分别为左上, 右上, 右下, 左下
-    private boolean isCircle;                   // 是否为圆形
-    private Path mPath, mTargetPath;            // 原图片大小的Path和目标图片的Path
-    private RectF mOriginRectF;                 // 原图片区域的大小
+    private final int[] mCornerRadius = new int[4];   // 四个角的圆角大小, 分别为左上, 右上, 右下, 左下
+    private boolean isCircle;                         // 是否为圆形
+    private final Path mPath, mTargetPath;            // 原图片大小的Path和目标图片的Path
+    private RectF mOriginRectF;                       // 原图片区域的大小
 
-    private boolean isMask;                     // 是否按压有灰色阴影
+    private boolean isMask;                           // 是否按压有灰色阴影
 
-    private float mRatio;                       // ImageView的宽高比例
-    private int mForegroundColor;               // 点击反馈时的前景颜色
+    private float mRatio;                             // ImageView的宽高比例
+    private int mForegroundColor;                     // 点击反馈时的前景颜色
 
-    private int mNumber;                        // 数量文本显示剩余的数量
-    private int mNumberColor;                   // 显示文字的颜色
-    private int mNumberMaskColor;               // 默认的遮盖颜色
-    private float mNumberSize;                  // 显示文字的大小单位sp
+    private int mNumber;                              // 数量文本显示剩余的数量
+    private int mNumberColor;                         // 显示文字的颜色
+    private final int mNumberMaskColor;               // 默认的遮盖颜色
+    private float mNumberSize;                        // 显示文字的大小单位sp
 
-    private Paint mPaint;                       // 绘制使用的画笔
+    private final Paint mPaint;                       // 绘制使用的画笔
 
-    private ImageZoomHelper mImageZoomHelper;   // 设置图片可以缩放和移动
+    private ImageZoomHelper mImageZoomHelper;         // 设置图片可以缩放和移动
     private boolean isPreview;
 
     /**

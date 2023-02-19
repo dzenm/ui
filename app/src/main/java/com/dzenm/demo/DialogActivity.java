@@ -1,6 +1,8 @@
 package com.dzenm.demo;
 
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.HandlerThread;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Toast;
@@ -12,7 +14,6 @@ import com.dzenm.dialog.PromptDialog;
 import com.dzenm.dialog.Utils;
 
 public class DialogActivity extends AppCompatActivity {
-
     private final String[] mItems = new String[]{"Item 1", "Item 2", "Item 3", "Item 4"};
 
     @Override
@@ -80,11 +81,11 @@ public class DialogActivity extends AppCompatActivity {
                             dialog.dismiss();
                         }
                     }).setPositiveClickListener("ACCEPT", new MaterialDialog.OnClickListener() {
-                @Override
-                public void onClick(MaterialDialog dialog, int which) {
-                    dialog.dismiss();
-                }
-            }).create().show();
+                        @Override
+                        public void onClick(MaterialDialog dialog, int which) {
+                            dialog.dismiss();
+                        }
+                    }).create().show();
         } else if (view.getId() == R.id.tv_12) {
             new MaterialDialog.Builder(this)
                     .setMessage("Message")
@@ -220,12 +221,7 @@ public class DialogActivity extends AppCompatActivity {
                     .setMessage("Hello Message")
                     .setItem(mItems)
                     .setButtonText("ACCECP", "DECLINE")
-                    .setOnItemClickListener(new MaterialDialog.OnItemClickListener() {
-                        @Override
-                        public void onClick(MaterialDialog dialog, int which) {
-                            Toast.makeText(DialogActivity.this, "" + mItems[which], Toast.LENGTH_SHORT).show();
-                        }
-                    }).create().show();
+                    .setOnItemClickListener((dialog, which) -> Toast.makeText(DialogActivity.this, "" + mItems[which], Toast.LENGTH_SHORT).show()).create().show();
         } else if (view.getId() == R.id.tv_22) {
             new MaterialDialog.Builder(this)
                     .setTitle("Title")
@@ -242,12 +238,7 @@ public class DialogActivity extends AppCompatActivity {
                             dialog.dismiss();
                         }
                     })
-                    .setOnSingleClickListener(new MaterialDialog.OnSingleClickListener() {
-                        @Override
-                        public void onClick(MaterialDialog dialog, int which, boolean isChecked) {
-                            Toast.makeText(DialogActivity.this, "" + mItems[which] + ", checked: " + isChecked, Toast.LENGTH_SHORT).show();
-                        }
-                    }).create().show();
+                    .setOnSingleClickListener((dialog, which, isChecked) -> Toast.makeText(DialogActivity.this, "" + mItems[which] + ", checked: " + isChecked, Toast.LENGTH_SHORT).show()).create().show();
         } else if (view.getId() == R.id.tv_23) {
             new MaterialDialog.Builder(this)
                     .setTitle("Title")
@@ -264,45 +255,27 @@ public class DialogActivity extends AppCompatActivity {
                             dialog.dismiss();
                         }
                     })
-                    .setOnMultipleClickListener(new MaterialDialog.OnMultipleClickListener() {
-                        @Override
-                        public void onClick(MaterialDialog dialog, int which, boolean isChecked) {
-                            Toast.makeText(DialogActivity.this, "" + mItems[which] + ", checked: " + isChecked, Toast.LENGTH_SHORT).show();
-                        }
-                    }).create().show();
+                    .setOnMultipleClickListener((dialog, which, isChecked) -> Toast.makeText(DialogActivity.this, "" + mItems[which] + ", checked: " + isChecked, Toast.LENGTH_SHORT).show()).create().show();
         } else if (view.getId() == R.id.tv_24) {
             new MaterialDialog.Builder(this)
                     .setItem(mItems)
                     .setMaterialDesign(false)
-                    .setOnItemClickListener(new MaterialDialog.OnItemClickListener() {
-                        @Override
-                        public void onClick(MaterialDialog dialog, int which) {
-                            Toast.makeText(DialogActivity.this, "" + mItems[which], Toast.LENGTH_SHORT).show();
-                            dialog.dismiss();
-                        }
+                    .setOnItemClickListener((dialog, which) -> {
+                        Toast.makeText(DialogActivity.this, "" + mItems[which], Toast.LENGTH_SHORT).show();
+                        dialog.dismiss();
                     }).create().show();
         } else if (view.getId() == R.id.tv_25) {
             new MaterialDialog.Builder(this)
                     .setTitle("Title")
                     .setItem(mItems)
                     .setMaterialDesign(false)
-                    .setOnSingleClickListener(new MaterialDialog.OnSingleClickListener() {
-                        @Override
-                        public void onClick(MaterialDialog dialog, int which, boolean isChecked) {
-                            Toast.makeText(DialogActivity.this, "" + mItems[which] + ", checked: " + isChecked, Toast.LENGTH_SHORT).show();
-                        }
-                    }).create().show();
+                    .setOnSingleClickListener((dialog, which, isChecked) -> Toast.makeText(DialogActivity.this, "" + mItems[which] + ", checked: " + isChecked, Toast.LENGTH_SHORT).show()).create().show();
         } else if (view.getId() == R.id.tv_26) {
             new MaterialDialog.Builder(this)
                     .setTitle("Title")
                     .setItem(mItems)
                     .setMaterialDesign(false)
-                    .setOnMultipleClickListener(new MaterialDialog.OnMultipleClickListener() {
-                        @Override
-                        public void onClick(MaterialDialog dialog, int which, boolean isChecked) {
-                            Toast.makeText(DialogActivity.this, "" + mItems[which] + ", checked: " + isChecked, Toast.LENGTH_SHORT).show();
-                        }
-                    }).create().show();
+                    .setOnMultipleClickListener((dialog, which, isChecked) -> Toast.makeText(DialogActivity.this, "" + mItems[which] + ", checked: " + isChecked, Toast.LENGTH_SHORT).show()).create().show();
         } else if (view.getId() == R.id.tv_40) {
             String message = "从方法的名称中可以看出该方法主要是负责分发，是安卓事件分发过程中的核心。事件是如何传递的，主要就是看该方法，理解了这个方法，也就理解了安卓事件分发机制。\n" +
                     "\n" +
@@ -367,34 +340,25 @@ public class DialogActivity extends AppCompatActivity {
         } else if (view.getId() == R.id.tv_43) {
             new MaterialDialog.Builder(this)
                     .setItem("拍照", "图片", "取消")
-                    .setOnItemClickListener(new MaterialDialog.OnItemClickListener() {
-                        @Override
-                        public void onClick(MaterialDialog dialog, int which) {
-                            Toast.makeText(DialogActivity.this, "" + which, Toast.LENGTH_SHORT).show();
-                            dialog.dismiss();
-                        }
+                    .setOnItemClickListener((dialog, which) -> {
+                        Toast.makeText(DialogActivity.this, "" + which, Toast.LENGTH_SHORT).show();
+                        dialog.dismiss();
                     }).create().show();
         } else if (view.getId() == R.id.tv_44) {
             new MaterialDialog.Builder(this)
                     .setItem("拍照", "图片", "取消")
                     .setGravity(Gravity.BOTTOM)
-                    .setOnItemClickListener(new MaterialDialog.OnItemClickListener() {
-                        @Override
-                        public void onClick(MaterialDialog dialog, int which) {
-                            Toast.makeText(DialogActivity.this, "" + which, Toast.LENGTH_SHORT).show();
-                            dialog.dismiss();
-                        }
+                    .setOnItemClickListener((dialog, which) -> {
+                        Toast.makeText(DialogActivity.this, "" + which, Toast.LENGTH_SHORT).show();
+                        dialog.dismiss();
                     }).create().show();
         } else if (view.getId() == R.id.tv_45) {
             new MaterialDialog.Builder(this)
                     .setItem("拍照", "图片")
                     .setMaterialDesign(false)
-                    .setOnItemClickListener(new MaterialDialog.OnItemClickListener() {
-                        @Override
-                        public void onClick(MaterialDialog dialog, int which) {
-                            Toast.makeText(DialogActivity.this, "" + which, Toast.LENGTH_SHORT).show();
-                            dialog.dismiss();
-                        }
+                    .setOnItemClickListener((dialog, which) -> {
+                        Toast.makeText(DialogActivity.this, "" + which, Toast.LENGTH_SHORT).show();
+                        dialog.dismiss();
                     }).create().show();
         } else if (view.getId() == R.id.tv_loading_success) {
             PromptDialog.newInstance(this)

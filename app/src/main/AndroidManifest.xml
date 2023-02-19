@@ -12,20 +12,36 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Ui">
-        <activity android:name="com.dzenm.demo.FishActivity" />
-        <activity android:name="com.dzenm.demo.MainActivity">
+        <activity
+            android:name="com.dzenm.demo.FishActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.dzenm.demo.MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.dzenm.demo.DialogActivity" />
-        <activity android:name="com.dzenm.demo.BadgeDrawableActivity" />
-        <activity android:name="com.dzenm.demo.SwitchButtonActivity" />
-        <activity android:name="com.dzenm.demo.EditControlTextActivity" />
-        <activity android:name="com.dzenm.demo.RatioImageViewActivity" />
-        <activity android:name="com.dzenm.demo.ProgressViewActivity" />
+        <activity
+            android:name="com.dzenm.demo.DialogActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.dzenm.demo.BadgeDrawableActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.dzenm.demo.SwitchButtonActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.dzenm.demo.EditControlTextActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.dzenm.demo.RatioImageViewActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.dzenm.demo.ProgressViewActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
